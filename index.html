@@ -1,33 +1,17 @@
-<!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>Rabin-Karp</title>
-  
-  
-  
-  
-  
-</head>
-
-<body>
-  <!doctype html>
+<!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Rabin-Karp</title>
-	<!--
-	<script src="//use.edgefonts.net/aclonica.js"></script>
--->
-	<style type="text/css">
+  <meta charset="utf-8">
+  <title>Rabin-Karp</title>
+  <style type="text/css">
 body {
-	font-family: aclonica, sans-serif;
-	margin: 0;
-	padding: 0;
-	height: 100vh;
+  font-family: aclonica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 .main {
-	display: block;
+  display: block;
   width: 100%;
   min-height: 100%;
   background: #003e88;
@@ -47,116 +31,116 @@ body {
 }
 
 .row {
-	font-family: aclonica, sans-serif;
-	width: 98%;
-	margin-left: 1%;
-	margin-top: 0px;
-	display: inline-block;
-	height: inherit;
-	margin-right: 1%;
-	margin-bottom: 20px;
+  font-family: aclonica, sans-serif;
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 0px;
+  display: inline-block;
+  height: inherit;
+  margin-right: 1%;
+  margin-bottom: 20px;
 }
 
 .controls {
-	text-align: center;
-	width: 20%;
-	float: left;
-	height: inherit;
+  text-align: center;
+  width: 20%;
+  float: left;
+  height: inherit;
 }
 
 button {
-	outline: none;
-	width: 100px;
-	border: 2px solid white;
-	padding: 10px;
-	border-radius:10px;
-	background-color: #706AFF;
-	text-align: center;
-	color:#E8E6D1;
-	letter-spacing: 2px;
-	font-style: italic;
-	font-weight: 800;
-	cursor: pointer;
-	position: relative;
-	transition: color .8s, background-color .8s, width .8s, top .1s;
+  outline: none;
+  width: 100px;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius:10px;
+  background-color: #706AFF;
+  text-align: center;
+  color:#E8E6D1;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  transition: color .8s, background-color .8s, width .8s, top .1s;
 }
 
 button:hover {
-	color:#706AFF;
-	background-color: #E8E6D1;
+  color:#706AFF;
+  background-color: #E8E6D1;
 }
 
 .controls {
-	height:inherit;
-	margin-top: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 20px;
-	border-right: 1px solid white;
-	width: 20%;
-	min-width: 230px;
+  height:inherit;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  border-right: 1px solid white;
+  width: 20%;
+  min-width: 230px;
 }
 
 .right-side {
-	height: inherit;
-	display: inline-block;
-	padding-top: 30px;
-	padding-left: 20px;
-	width: 75%;
+  height: inherit;
+  display: inline-block;
+  padding-top: 30px;
+  padding-left: 20px;
+  width: 75%;
 }
 
 .char {
-	display: inline-block;
-	width: 15px;
-	height: 15px;
-	color: white;
-	font-family: monospace;
-	font-size: 26px;
-	position: relative;
-	font-weight: 700;
-	transition: color .5s, top .1s, left .5s;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  color: white;
+  font-family: monospace;
+  font-size: 26px;
+  position: relative;
+  font-weight: 700;
+  transition: color .5s, top .1s, left .5s;
 }
 
 #forsub {
-	margin-top: 17px;
+  margin-top: 17px;
 }
 
 .central {
-	display: inline-block;
+  display: inline-block;
 }
 
 .headerrow > h1 {
-	
-	text-shadow: -4px -2px 20px rgba(255, 255, 183, 0.82);
+  
+  text-shadow: -4px -2px 20px rgba(255, 255, 183, 0.82);
 }
 
-.headerrow {	
-	position:relative;
-	top: 10px;
-	color:#E0C57E;
-	text-align:center;
+.headerrow {  
+  position:relative;
+  top: 10px;
+  color:#E0C57E;
+  text-align:center;
 }
 
 input[type=text] {
-	border-radius: 10px;
-	padding: 10px;
-	text-align: center;
-	letter-spacing: 1px;
-	transition: box-shadow 1s;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: box-shadow 1s;
 }
 
 input[type=text]:focus{
-	outline: none;
-	box-shadow: 0px 0px 67px -9px rgba(255,255,255,1);
+  outline: none;
+  box-shadow: 0px 0px 67px -9px rgba(255,255,255,1);
 }
 
 #hashes {
-	color: white;
-	font-style: italic;
-	font-size: 15px;
-	height: 25px;
-	text-align: left;
-	margin-bottom: 0;
+  color: white;
+  font-style: italic;
+  font-size: 15px;
+  height: 25px;
+  text-align: left;
+  margin-bottom: 0;
 }
 
 input[type=range]
@@ -219,88 +203,87 @@ cursor: pointer;
 }
 
 input[type=range] {
-	height: 0px;
-	outline: none;
-	width: 80%;
+  height: 0px;
+  outline: none;
+  width: 80%;
 }</style>
 </head>
 <body>
-	<div class="main">
-		<div class="row headerrow">
-			<h1>Rabin–Karp algorithm</h1>
-		</div>
-		<div class="row">
-			<div class="controls">
-				<div class="row"><input class="textinp" id="mainst" type="text" placeholder="String"></div>
-				<div class="row">
-					<input type="text" class="textinp" id="subst" placeholder="Substring"></input>
-				</div>
-				<div class="row">
-					<button id="searchBut" onclick="clicked(this)">SEARCH</button>
-					<button onclick="clicked(this)">RESET</button>
-				</div>
-				<div class="row">
-					<input type="range" min="300" max="800" step="100" list="speeds" onchange="setSpeed(this.value)">
-					<datalist id="speeds">
-				      <option value="300">
-				      <option value="400">
-				      <option value="500">
-				      <option value="600">
-				      <option value="700">
-				      <option value="800">
-					</datalist>
-				</div>
-				<div class="row">
-					<button onclick="clicked(this)" id='pbt' class="central">PAUSE</button>
-				</div>
-			</div>
-			<div class="right-side">
-				<div class="row" id='formain'>
-				</div>
-				<div class="row" id='forsub'>
-				</div>
-				<div class="row" id="hashes">
-					Logs: <br>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-	//интерактив
+  <div class="main">
+    <div class="row headerrow">
+      <h1>Rabin-Karp search</h1>
+    </div>
+    <div class="row">
+      <div class="controls">
+        <div class="row"><input class="textinp" maxlength='40' id="mainst" type="text" placeholder="String"></div>
+        <div class="row">
+          <input type="text" class="textinp" maxlength='20' id="subst" placeholder="Substring"></input>
+        </div>
+        <div class="row">
+          <button id="searchBut" onclick="clicked(this)">SEARCH</button>
+          <button onclick="clicked(this)">RESET</button>
+        </div>
+        <div class="row">
+          <input type="range" min="300" max="800" step="100" list="speeds" onchange="setSpeed(this.value)">
+          <datalist id="speeds">
+              <option value="300">
+              <option value="400">
+              <option value="500">
+              <option value="600">
+              <option value="700">
+              <option value="800">
+          </datalist>
+        </div>
+        <div class="row">
+          <button onclick="clicked(this)" id='pbt' class="central">PAUSE</button>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="row" id='formain'>
+        </div>
+        <div class="row" id='forsub'>
+        </div>
+        <div class="row" id="hashes">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //интерактив
 function clicked(elem) {
-	console.log('smt is clicked');
-	elem.style.top = "2px";
-	setTimeout(function(){
-		elem.style.top = "0px";
-	}, 100);
-	switch (elem.innerHTML){
-		case 'SEARCH':
-			elem.disabled = true;
-			searchRabinKarp(document.getElementById("mainst").value, document.getElementById("subst").value);
-			break;
-		case 'PAUSE':
-			elem.style.width = "120px";
-			elem.innerHTML = "CONTINUE";
-			paused = true;
-			break;
-		case 'CONTINUE':
-			elem.style.width = "100px";
-			elem.innerHTML = "PAUSE";
-			paused = false;
-			break;
-		case 'RESET':
-			reset();
-			break;
-		default:
-			break;
-		}
-	return;
+  console.log('smt is clicked');
+  elem.style.top = "2px";
+  setTimeout(function(){
+    elem.style.top = "0px";
+  }, 100);
+  switch (elem.innerHTML){
+    case 'SEARCH':
+      elem.disabled = true;
+      searchRabinKarp(document.getElementById("mainst").value, document.getElementById("subst").value);
+      break;
+    case 'PAUSE':
+      elem.style.width = "120px";
+      elem.innerHTML = "CONTINUE";
+      paused = true;
+      break;
+    case 'CONTINUE':
+      elem.style.width = "100px";
+      elem.innerHTML = "PAUSE";
+      paused = false;
+      break;
+    case 'RESET':
+      reset();
+      break;
+    default:
+      break;
+    }
+  return;
 }
 
 var speed = 500;
 
 function setSpeed(sp) {
-	speed = 1000 - sp;
+  speed = 1000 - sp;
 }
 
 var paused = false;
@@ -312,8 +295,8 @@ function sleep(ms) {
 var primeBase = 17; //любое простое число
 
 function updateHashes(mHash, sHash, mSt, sSt) {
-	var st = 'hash(' + sSt + ') = ' + mHash + ' | hash(' + mSt + ') = ' + sHash + '<br>';
-	document.getElementById("hashes").innerHTML += st;
+  var st = 'hash(' + sSt + ') = ' + mHash + ' | hash(' + mSt + ') = ' + sHash + '<br>';
+  document.getElementById("hashes").innerHTML += st;
 }
 
 function hashFromTo(str, from, to) {
@@ -325,91 +308,92 @@ function hashFromTo(str, from, to) {
 }
 
 function isPrime(num) {
-	num = (num < 0) ? parseInt(-num) : parseInt(num);
-	for (var i = 2; i < Math.sqrt(num); i++) 	
-		if(n%i==0)
-			return false;
-	return true;
+  num = (num < 0) ? parseInt(-num) : parseInt(num);
+  for (var i = 2; i < Math.sqrt(num); i++)  
+    if(n%i==0)
+      return false;
+  return true;
 }
 
 function mylog(where, what) {
-	var sign = '';
-	if (where == "formain") {
-		sign = "m";
-	} else {
-		sign = "s";
-	}
-	where = document.getElementById(where);
-	where.innerHTML = '';
-	for (var i = 0; i < what.length; i++) {
-		where.innerHTML += '<div class="char" id="' + sign + i + '">' + what.charAt(i) + '</div>';
-	};
+  var sign = '';
+  if (where == "formain") {
+    sign = "m";
+  } else {
+    sign = "s";
+  }
+  where = document.getElementById(where);
+  where.innerHTML = '';
+  for (var i = 0; i < what.length; i++) {
+    where.innerHTML += '<div class="char" id="' + sign + i + '">' + what.charAt(i) + '</div>';
+  };
 }
 
 var inp1 = document.getElementById("mainst");
 inp1.oninput = function() {
-	mylog("formain", inp1.value);
+  mylog("formain", inp1.value);
 }
 
 var inp2 = document.getElementById("subst");
 inp2.oninput = function() {
-	mylog("forsub", inp2.value);
+  mylog("forsub", inp2.value);
 }
 /*
 var inp = [];
 inp.push(document.getElementsByClassName("textinp"));
 inp.forEach(function(el) {
-	el.oninput = function () {
-	console.log(this.value);
+  el.oninput = function () {
+  console.log(this.value);
 }
 });
 */
 
 //tilt -- сдвиг подстроки вправо в пикселях
 function moveSubRight(tilt) {
-	var length = document.getElementById("subst").value.length;
-	for (var i = 0; i < length; i++) {
-		document.getElementById("s"+i).style.color = "white";
-		document.getElementById("s"+i).style.left = tilt + "px";
-	}
+  var length = document.getElementById("subst").value.length;
+  for (var i = 0; i < length; i++) {
+    document.getElementById("s"+i).style.color = "white";
+    document.getElementById("s"+i).style.left = tilt + "px";
+  }
 }
 
 function colorIt(from, color) {
-	var length = document.getElementById("subst").value.length;
-	for (var j = 0; j < length; j++) {
-		document.getElementById("s"+j).style.color = color;
-		document.getElementById("m"+(j+from)).style.color = color;
-	}
+  var length = document.getElementById("subst").value.length;
+  for (var j = 0; j < length; j++) {
+    document.getElementById("s"+j).style.color = color;
+    document.getElementById("m"+(j+from)).style.color = color;
+  }
 }
 
 function reset() {
-	document.getElementById('hashes').innerHTML = '';
-	document.getElementById('formain').innerHTML = '';
-	document.getElementById('forsub').innerHTML = '';
-	document.getElementById('mainst').value = '';
-	document.getElementById('subst').value = '';
-	document.getElementById('pbt').innerHTML = 'PAUSE';
- 	document.getElementById("searchBut").disabled = false;
+  document.getElementById('hashes').innerHTML = '';
+  document.getElementById('formain').innerHTML = '';
+  document.getElementById('forsub').innerHTML = '';
+  document.getElementById('mainst').value = '';
+  document.getElementById('subst').value = '';
+  document.getElementById('pbt').innerHTML = 'PAUSE';
+  document.getElementById("searchBut").disabled = false;
 }
 
 //возвращает массив вхождений (начальная позиция вхождения в исх-ой строке)
 async function searchRabinKarp(text, str) {
 
-	document.getElementById('hashes').innerHTML = '';
-	console.log("search started");
+  document.getElementById('hashes').innerHTML = '';
+  console.log("search started");
+  //результаты
   var matches = [];
 
-  var hashStr = hashFromTo(str, 0, str.length),
-  	  hashTextPart = hashFromTo(text, 0, str.length),
+  var hashStr = hashFromTo(str, 0, str.length), //хэш подстроки
+      hashTextPart = hashFromTo(text, 0, str.length),
       primeToPower = Math.pow(primeBase, str.length),
       maxIndexForPotentialMatch = text.length - str.length;
 
   for (var i = 0; i <= maxIndexForPotentialMatch; i++) {
-  	//сдвиг
-  	moveSubRight(15*i);
-  	await sleep(speed);
+    //сдвиг
+    moveSubRight(15*i);
+    await sleep(speed);
 
-  	//уходим спать, если нажата пауза, пока не проснемся)
+    //уходим спать, если нажата пауза, пока не проснемся)
     while (paused) {
       await sleep(1000);
       if (!paused) break;
@@ -418,18 +402,21 @@ async function searchRabinKarp(text, str) {
     updateHashes(hashStr, hashTextPart, text.substr(i, str.length) ,str);
 
     if (hashTextPart === hashStr) {
-			//посимвольная проверка
+      //посимвольная проверка
       if (matchesAtIndex(i, text, str)) {
-        	matches.push(i);
-        	colorIt(i, 'green');
-        	await sleep(speed);
-    	}	
-	}
+          matches.push(i);
+          colorIt(i, 'green');
+          await sleep(speed);
+      } 
+  }
     hashTextPart = primeBase * hashTextPart - primeToPower * text.charCodeAt(i) + text.charCodeAt(i + str.length);
   }
 
   console.log(matches);
   document.getElementById("searchBut").disabled = false;
+  for (var i = 0; i < matches.length; i++) {
+    console.log(matches[i]);
+  };
   return matches;
 }
 
@@ -444,10 +431,6 @@ function matchesAtIndex(index, text, str) {
   }
   return matches;
 }
-	</script>
-</body>
-</html>
-  
-  
+  </script>
 </body>
 </html>
