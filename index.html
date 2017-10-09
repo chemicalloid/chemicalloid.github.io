@@ -1,4 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Raben-Karp</title>
+  
+  
+  
+  
+  
+</head>
+
+<body>
+  <!doctype html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -214,7 +227,7 @@ input[type=range] {
 <body>
 	<div class="main">
 		<div class="row headerrow">
-			<h1>Алгоритм Рабина-Карпа</h1>
+			<h1>РђР»РіРѕСЂРёС‚Рј Р Р°Р±РёРЅР°-РљР°СЂРїР°</h1>
 		</div>
 		<div class="row">
 			<div class="controls">
@@ -253,7 +266,7 @@ input[type=range] {
 		</div>
 	</div>
 	<script type="text/javascript">
-	//интерактив
+	//РёРЅС‚РµСЂР°РєС‚РёРІ
 function clicked(elem) {
 	console.log('smt is clicked');
 	elem.style.top = "2px";
@@ -291,12 +304,12 @@ function setSpeed(sp) {
 }
 
 var paused = false;
-//логика
+//Р»РѕРіРёРєР°
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-var primeBase = 17; //любое простое число
+var primeBase = 17; //Р»СЋР±РѕРµ РїСЂРѕСЃС‚РѕРµ С‡РёСЃР»Рѕ
 
 function updateHashes(mHash, sHash, mSt, sSt) {
 	var st = 'hash(' + sSt + ') = ' + mHash + ' | hash(' + mSt + ') = ' + sHash + '<br>';
@@ -352,7 +365,7 @@ inp.forEach(function(el) {
 });
 */
 
-//tilt -- сдвиг подстроки вправо в пикселях
+//tilt -- СЃРґРІРёРі РїРѕРґСЃС‚СЂРѕРєРё РІРїСЂР°РІРѕ РІ РїРёРєСЃРµР»СЏС…
 function moveSubRight(tilt) {
 	var length = document.getElementById("subst").value.length;
 	for (var i = 0; i < length; i++) {
@@ -379,7 +392,7 @@ function reset() {
  	document.getElementById("searchBut").disabled = false;
 }
 
-//возвращает массив вхождений (начальная позиция вхождения в исх-ой строке)
+//РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°СЃСЃРёРІ РІС…РѕР¶РґРµРЅРёР№ (РЅР°С‡Р°Р»СЊРЅР°СЏ РїРѕР·РёС†РёСЏ РІС…РѕР¶РґРµРЅРёСЏ РІ РёСЃС…-РѕР№ СЃС‚СЂРѕРєРµ)
 async function searchRabinKarp(text, str) {
 
 	document.getElementById('hashes').innerHTML = '';
@@ -392,11 +405,11 @@ async function searchRabinKarp(text, str) {
       maxIndexForPotentialMatch = text.length - str.length;
 
   for (var i = 0; i <= maxIndexForPotentialMatch; i++) {
-  	//сдвиг
+  	//СЃРґРІРёРі
   	moveSubRight(15*i);
   	await sleep(speed);
 
-  	//уходим спать, если нажата пауза, пока не проснемся)
+  	//СѓС…РѕРґРёРј СЃРїР°С‚СЊ, РµСЃР»Рё РЅР°Р¶Р°С‚Р° РїР°СѓР·Р°, РїРѕРєР° РЅРµ РїСЂРѕСЃРЅРµРјСЃСЏ)
     while (paused) {
       await sleep(1000);
       if (!paused) break;
@@ -405,7 +418,7 @@ async function searchRabinKarp(text, str) {
     updateHashes(hashStr, hashTextPart, text.substr(i, str.length) ,str);
 
     if (hashTextPart === hashStr) {
-			//посимвольная проверка
+			//РїРѕСЃРёРјРІРѕР»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР°
       if (matchesAtIndex(i, text, str)) {
         	matches.push(i);
         	colorIt(i, 'green');
@@ -432,5 +445,9 @@ function matchesAtIndex(index, text, str) {
   return matches;
 }
 	</script>
+</body>
+</html>
+  
+  
 </body>
 </html>
